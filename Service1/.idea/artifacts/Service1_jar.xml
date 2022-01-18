@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Service1:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Service1_jar</output-path>
+    <root id="archive" name="Service1.jar">
+      <element id="module-output" name="Service1" />
+      <element id="extracted-dir" path="$USER_HOME$/.m2/repository/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jettison-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jackson-xc-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jsr311-api-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jersey-core-1.19.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jersey-json-1.19.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jackson-jaxrs-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jersey-client-1.19.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jersey-server-1.19.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jersey-servlet-1.19.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jackson-core-asl-1.9.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ExternalJARS/jackson-mapper-asl-1.9.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

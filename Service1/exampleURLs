@@ -1,0 +1,4 @@
+http://localhost:9988/whatsonrest/whatson/query/2021-11-15
+http://localhost:9988/whatsonrest/whatson/add/THE%20MATRIX%20RESURRECTIONS/LANA%20WACHOWSKI/2021-12-24/2022-01-30
+http://localhost:9988/whatsonrest/whatson/add/test/test/2021-11-01/2021-12-30
+curl -i -X POST http://localhost:9988/whatsonrest/whatson/add/test2/test2/2022-01-11/2022-02-11

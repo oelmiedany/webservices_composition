@@ -1,0 +1,54 @@
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 8vh;
+    padding: 5px;
+    align-items: left;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 8vh;
+    padding-left: 40px;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.date-form {
+    padding-top: 40px;
+}
+.date-button {
+    font-size: 16px;
+}
+.film-list {
+    padding: 5px;
+}
+.film-container {
+    display: flex;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+    background-color: rgba(250, 235, 215, 0);
+}
+.film-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+.film-info {
+    font-size: 20px;
+    font-weight: 400;
+}
+.nytimes-link{
+    font-size: 20px;
+    font-weight: 400;
+}

@@ -1,0 +1,38 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>    
+    <!-- custom css-->
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="title">Films by {{ director }}, Critic pick ratio: {{critic_ratio}}</div>
+                {% set count = namespace(value=0) %}
+                {% for film in films %}
+                    <div class="film-conainer">
+                        <div class="film-title">{{film.title}}</div>
+                        <div class="film-info">{{film.year}}</div>
+                        <div class="film-info">Genre: {{film.genre}}</div>
+                        <div class="film-info">Actors: {{film.actors}}</div>
+                        <div class="film-info">Duration: {{film.duration}} mins</div>
+                        {% if nytimes_info[count.value].headline == "no review" %}
+                            <div class="film-info">No NYTimes review for this film</div>
+                        {% else %}
+                            <div class="film-info">NYTimes Critic Pick? {{nytimes_info[count.value].critics_pick}}</div>
+                            <a class="nytimes-link" href={{nytimes_info[count.value].url}}>{{nytimes_info[count.value].headline}}</a>
+                        {% endif %}
+                    </div>
+                {% set count.value = count.value + 1 %}
+                {% endfor %}
+        </div>
+    </div>
+</body>

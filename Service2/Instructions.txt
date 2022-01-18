@@ -1,0 +1,5 @@
+Instructions to run this service:
+
+1. Activate a flask virtual environment and install the requirements
+
+2. In the flask vem enter 'python webservice2.py'

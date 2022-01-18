@@ -1,0 +1,52 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>    
+    <!-- custom css-->
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="home-container">
+            <div class="title">Select a date to view films</div>
+            <form method="POST" action="" name="dateForm" class="date-form">
+                {{ dateForm.hidden_tag() }}
+                {{ dateForm.date() }}
+                <input class="btn btn-dark" type="submit" value="Apply">
+            </form>
+            <div class="title">Films showing on: {{date}}</div>
+            {% set count = namespace(value=0) %}
+            {% for film in films %}
+                <div class="film-conainer">
+                    <div class="film-title">{{film}}</div>
+                    <div class="film-info">Directed by: {{directors[count.value]}}</div>
+                    <a class="nytimes-link" href="http://127.0.0.1:5000/director-films/{{directors[count.value]}}">See {{directors[count.value]}}'s Films</a>
+            {% set count.value = count.value + 1 %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          var date_input=$('input[name="date"]'); //our date input has the name "date"
+          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+          var options={
+            format: 'yyyy-mm-dd',
+            weekStart: 1,
+            container: container,
+            todayBtn: "linked",
+            todayHighlight: true,
+            autoclose: true,
+            orientaion: "bottom",
+          };
+          date_input.datepicker(options);
+        })
+      </script>
+</body>
